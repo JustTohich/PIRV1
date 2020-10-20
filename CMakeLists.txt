@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.9)
 project (lab1)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fopenmp")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3 -fopenmp")
 
 set(COMMON_DEPS common.h common.c)
 
