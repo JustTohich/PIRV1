@@ -6,9 +6,7 @@
 #include "common.h"
 
 static inline void dot_multiple(int* a, int *b, int *c, int i_from, int i_to, int j_from, int j_to, int k_from, int k_to, int n, int par_type) {
-#pragma omp parallel for if (par_type == 1)
     for (int i = i_from; i < i_to; i++) {
-#pragma omp parallel for if (par_type == 2)
         for (int j = j_from; j < j_to; j++) {
             for (int k = k_from; k < k_to; k++) {
                 c[i * n + j] += a[i * n + k] * b[k * n + j];
